@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Newgrounds Enhancer
 // @namespace    Invertex.NG
-// @version      0.11
+// @version      0.12
 // @description  Automatically loads highest quality NG video and enables video download
 // @author       Invertex
 // @match        https://www.newgrounds.com/portal/view/*
@@ -57,7 +57,7 @@ async function getVidDownloadInfo(id)
     let vidInfo = await getVideoInfo(id);
     if(vidInfo == null) { return null; }
 
-    let filename = `${vidInfo.author}_${vidInfo.id} - ${vidInfo.title}`;
+    let filename = `${vidInfo.author}_${vidInfo.id} - ${vidInfo.title}.mp4`;
     return {url: stripVariants(vidInfo), filename: filename};
 }
 
