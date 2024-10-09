@@ -9,7 +9,7 @@ Download button location:<br/>
 
 # Installation
 To install this, you need a User Script manager installed in your browser.<br/>
-There are plenty of options such as [Tamper Monkey](https://www.tampermonkey.net/) or [Violent Monkey](https://github.com/violentmonkey/violentmonkey). Install these to the browser of your choice.<br/>
+There are plenty of options such as [Tamper Monkey](https://www.tampermonkey.net/) or [Violent Monkey](https://github.com/violentmonkey/violentmonkey). Install one of these to your browser.<br/>
 
 Then click [this link](https://github.com/Invertex/Newgrounds-Enhancer/raw/main/newgrounds_enhancer.user.js) to install the user-script from this repo directly. (Or go and directly view the "RAW" of `newgrounds_enhancer.user.js`)
 </br>
