@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Newgrounds Enhancer
 // @namespace    Invertex.NG
-// @version      0.1
+// @version      0.11
 // @description  Automatically loads highest quality NG video and enables video download
 // @author       Invertex
 // @match        https://www.newgrounds.com/portal/view/*
@@ -25,7 +25,10 @@ async function processPage(){
     let id = window.location.href.split('/view/')[1];
 
     let dlInfo = await getVidDownloadInfo(id);
-    let infoheader = await awaitElem(document.body, '#embed_header .favefollow-buttons');
+    let embedHeader = await awaitElem(document.body, '#embed_header');
+    let shareBtn = await awaitElem(embedHeader, 'span:has(> #share_content)');
+    let likeBtn = embedHeader.querySelector('.favefollow-buttons');
+    let appendTo = likeBtn != null ? likeBtn : shareBtn;
 
     let dlBtn = document.createElement("button");
     dlBtn.className = "ngDlBtn";
@@ -38,7 +41,7 @@ async function processPage(){
                     () => { removeButtonEffect(dlBtn);},
                     () => { removeButtonEffect(dlBtn);});
     };
-    infoheader.appendChild(dlBtn);
+    appendTo.appendChild(dlBtn);
 }
 
 function removeButtonEffect(dlBtn)
@@ -54,7 +57,7 @@ async function getVidDownloadInfo(id)
     let vidInfo = await getVideoInfo(id);
     if(vidInfo == null) { return null; }
 
-    let filename = `${vidInfo.author}_${vidInfo.id}_${vidInfo.title}`;
+    let filename = `${vidInfo.author}_${vidInfo.id} - ${vidInfo.title}`;
     return {url: stripVariants(vidInfo), filename: filename};
 }
 
