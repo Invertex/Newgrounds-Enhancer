@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         Newgrounds Enhancer
 // @namespace    Invertex.NG
-// @version      0.12
+// @version      0.13
 // @description  Automatically loads highest quality NG video and enables video download
 // @author       Invertex
+// @updateURL    https://github.com/Invertex/Newgrounds-Enhancer/raw/main/newgrounds_enhancer.user.js
+// @downloadURL  https://github.com/Invertex/Newgrounds-Enhancer/raw/main/newgrounds_enhancer.user.js
 // @match        https://www.newgrounds.com/portal/view/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=newgrounds.com
 // @grant        unsafeWindow
