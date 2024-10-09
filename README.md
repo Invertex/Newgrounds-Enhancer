@@ -1,7 +1,7 @@
 # Newgrounds Enhancer
 Automatically makes videos play on highest quality and adds download option with detailed filename.</br>
 
-Filename example: (username_userID - Title)<br/>
+Filename example: (username_postID - Title)<br/>
   `Crisppyboat_950538 - Courage the Cowardly Dog.mp4`<br/>
 
 Download button location:<br/>
